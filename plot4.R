@@ -31,6 +31,3 @@ with(datapower, {
     plot(Global_reactive_power~datetime, type="l", 
          ylab="Global_rective_power",xlab="datatime")
 })
-
-dev.copy(png, file="plot4.png", height=480, width=480)
-dev.off()

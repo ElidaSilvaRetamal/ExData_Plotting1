@@ -8,15 +8,9 @@ dt <- paste(as.Date(datapower$Date),datapower$Time)
 datapower$datetime <- as.POSIXct(dt)
 
 ### Plot number 02
-png("plot2.png",width  = 480,height = 480)
-
 with(datapower, {
     plot(Global_active_power~datetime,
          type="l",
          xlab="",
          ylab="Global Active Power (kilowatts)")
 })
-
-dev.copy(png, file="plot2.png", height=480, width=480)
-dev.off()
-
